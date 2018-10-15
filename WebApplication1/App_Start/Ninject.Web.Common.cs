@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(WebApplication1.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(WebApplication1.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(WebApplication1.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(WebApplication1.NinjectWebCommon), "Stop")]
 
-namespace WebApplication1.App_Start
+namespace WebApplication1
 {
     using System;
     using System.Web;
@@ -11,6 +11,7 @@ namespace WebApplication1.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
+    using Models;
 
     public static class NinjectWebCommon 
     {
@@ -62,7 +63,7 @@ namespace WebApplication1.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             //kernel.Bind<IFormsAuthenticationService>().To<FormsAuthenticationService>();
-            //kernel.Bind<IRepository>().To<Repository>().WithConstructorArgument<string>("connectionStringDefault");
+            kernel.Bind<IRepository>().To<Repository>().WithConstructorArgument<string>("DefaultConnectionString");
             //kernel.Bind<IMembershipService>().To<MembershipService>();
             //kernel.Bind<IRoleService>().To<RoleService>();
         }        
