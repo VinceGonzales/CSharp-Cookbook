@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using BusinessObjects;
+using System.Web.Mvc;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -13,7 +14,8 @@ namespace WebApplication1.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            IHero hero = repository.GetHero(1);
+            return View(hero);
         }
     }
 }

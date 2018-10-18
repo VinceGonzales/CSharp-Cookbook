@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTest1", "WebTest1\WebTest1.csproj", "{3D2FEF4F-4D4E-4937-9426-F4C5DDB3F062}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObjects", "BusinessObjects\BusinessObjects.csproj", "{25836ECA-FEEF-4463-A318-9B6981631F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORM", "ORM\ORM.csproj", "{3164B56F-196A-495C-BC74-3F8D7E1735FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3D2FEF4F-4D4E-4937-9426-F4C5DDB3F062}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D2FEF4F-4D4E-4937-9426-F4C5DDB3F062}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D2FEF4F-4D4E-4937-9426-F4C5DDB3F062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25836ECA-FEEF-4463-A318-9B6981631F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25836ECA-FEEF-4463-A318-9B6981631F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25836ECA-FEEF-4463-A318-9B6981631F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25836ECA-FEEF-4463-A318-9B6981631F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3164B56F-196A-495C-BC74-3F8D7E1735FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3164B56F-196A-495C-BC74-3F8D7E1735FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3164B56F-196A-495C-BC74-3F8D7E1735FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3164B56F-196A-495C-BC74-3F8D7E1735FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

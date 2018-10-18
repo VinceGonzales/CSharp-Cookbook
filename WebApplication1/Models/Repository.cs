@@ -1,14 +1,25 @@
-﻿using System;
+﻿using BusinessObjects;
+using ORM;
+using System.Collections.Generic;
 
 namespace WebApplication1.Models
 {
     public class Repository : IRepository
     {
-        private string connectionString;
+        private IGenericContext db;
 
-        public Repository(string connectionstring)
+        public Repository(IGenericContext dbContext)
         {
-            connectionString = connectionstring;
+            db = dbContext;
+        }
+
+        public List<IHero> GetHeroes()
+        {
+            return db.GetHeroes();
+        }
+        public IHero GetHero(int id)
+        {
+            return db.GetHero(id);
         }
         public string[] GetStates()
         {

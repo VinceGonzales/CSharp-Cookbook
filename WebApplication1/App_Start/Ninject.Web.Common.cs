@@ -12,6 +12,9 @@ namespace WebApplication1
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
     using Models;
+    using ORM;
+    using ORM.ADO;
+    using System.Configuration;
 
     public static class NinjectWebCommon 
     {
@@ -62,10 +65,9 @@ namespace WebApplication1
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            //kernel.Bind<IFormsAuthenticationService>().To<FormsAuthenticationService>();
-            kernel.Bind<IRepository>().To<Repository>().WithConstructorArgument<string>("DefaultConnectionString");
-            //kernel.Bind<IMembershipService>().To<MembershipService>();
-            //kernel.Bind<IRoleService>().To<RoleService>();
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnectionString"].ConnectionString;
+            kernel.Bind<IGenericContext>().To<JusticeLeague>().WithConstructorArgument<string>(connectionString);
+            kernel.Bind<IRepository>().To<Repository>();
         }        
     }
 }

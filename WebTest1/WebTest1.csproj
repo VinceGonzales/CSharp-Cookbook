@@ -133,6 +133,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{25836eca-feef-4463-a318-9b6981631f58}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ORM\ORM.csproj">
+      <Project>{3164b56f-196a-495c-bc74-3f8d7e1735ff}</Project>
+      <Name>ORM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApplication1\WebApplication1.csproj">
       <Project>{70586477-7a01-45a6-94db-a2b6fb05d29a}</Project>
       <Name>WebApplication1</Name>

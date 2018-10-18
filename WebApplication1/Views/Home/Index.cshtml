@@ -1,9 +1,25 @@
-﻿
+﻿@using BusinessObjects
+@model Hero
 @{
     ViewBag.Title = "Home";
 }
 <div class="container" style="margin-top:60px;">
     <div class="row">
         <div class="col-md-12"><h2>Home Page</h2></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><strong class="vertalign-middle">Name:</strong></div>
+        <div class="col-md-4">
+            <div class="well" style="padding: 12px;">@Model.Name</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><strong class="vertalign-middle">Class:</strong></div>
+        <div class="col-md-4">
+            <div class="well" style="padding: 12px;">@Model.HeroClass</div>
+        </div>
     </div>
 </div>
